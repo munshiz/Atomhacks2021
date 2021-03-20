@@ -1,5 +1,6 @@
 import 'package:atomhacks_2021/model/post_model.dart';
 import 'package:atomhacks_2021/model/user_model.dart';
+import 'package:atomhacks_2021/model/comment_model.dart';
 
 class DemoValues {
   static final List<UserModel> users = [
@@ -15,7 +16,7 @@ class DemoValues {
     UserModel(
       id: "AMA",
       name: "Zawad",
-      email: "MunshiZ@bxscience.edu",
+      email: "Munshiz@bxscience.edu",
       followers: 456,
       joined: DateTime(2018, 5, 30),
       posts: 13,
@@ -40,6 +41,59 @@ class DemoValues {
         image:"assets/images/user.jpg"
     ),
   ];
+
+    static final List<CommentModel> _comments = <CommentModel>[
+    CommentModel(
+      comment:
+          "Et hic et sequi inventore. Molestiae laboriosam commodi exercitationem eum. ",
+      user: users[0],
+      time: DateTime(2019, 4, 30),
+    ),
+    CommentModel(
+      comment: "Unde id provident ut sunt in consequuntur qui sed. ",
+      user: users[1],
+      time: DateTime(2018, 5, 30),
+    ),
+    CommentModel(
+      comment: "Eveniet nesciunt distinctio sint ut. ",
+      user: users[0],
+      time: DateTime(2017, 6, 30),
+    ),
+    CommentModel(
+      comment: "Et facere a eos accusantium culpa quaerat in fugiat suscipit. ",
+      user: users[2],
+      time: DateTime(2019, 4, 30),
+    ),
+    CommentModel(
+      comment: "Necessitatibus pariatur harum deserunt cum illum ut.",
+      user: users[1],
+      time: DateTime(2018, 5, 30),
+    ),
+    CommentModel(
+      comment:
+          "Accusantium neque quis provident voluptatem labore quod dignissimos eum quaerat. ",
+      user: users[2],
+      time: DateTime(2017, 6, 30),
+    ),
+    CommentModel(
+      comment:
+          "Accusantium neque quis provident voluptatem labore quod dignissimos eum quaerat. ",
+      user: users[1],
+      time: DateTime(2019, 4, 30),
+    ),
+    CommentModel(
+      comment: "Neque est ut rerum vel sunt harum voluptatibus et. ",
+      user: users[0],
+      time: DateTime(2018, 5, 30),
+    ),
+    CommentModel(
+      comment:
+          "Hic accusantium minus fuga exercitationem id aut expedita doloribus. ",
+      user: users[1],
+      time: DateTime(2017, 6, 30),
+    ),
+  ];
+
 
   static final List<PostModel> posts = [
     PostModel(
