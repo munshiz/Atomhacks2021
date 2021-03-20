@@ -10,7 +10,7 @@ class DemoValues {
       followers: 123,
       joined: DateTime(2019, 4, 30),
       posts: 12,
-      image:"user.jpg"
+      image:"assets/images/user.jpg"
     ),
     UserModel(
       id: "2",
@@ -19,7 +19,7 @@ class DemoValues {
       followers: 456,
       joined: DateTime(2018, 5, 30),
       posts: 13,
-      image:"user.jpg"
+      image:"assets/images/user.jpg"
     ),
     UserModel(
       id: "3",
@@ -28,7 +28,7 @@ class DemoValues {
       followers: 789,
       joined: DateTime(2017, 6, 30),
       posts: 14,
-      image:"user.jpg"
+      image:"assets/images/user.jpg"
     ),
   ];
 
