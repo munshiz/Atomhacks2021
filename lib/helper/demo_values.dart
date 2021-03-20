@@ -14,15 +14,9 @@ class DemoValues {
       image:"assets/images/user.jpg"
     ),
     UserModel(
-<<<<<<< HEAD
       id: "AMA",
       name: "Zawad",
       email: "Munshiz@bxscience.edu",
-=======
-      id: "2",
-      name: "Ishrak",
-      email: "ishrak@gmail.com",
->>>>>>> 0f0491b170c234a854af0a655d614de0a075be14
       followers: 456,
       joined: DateTime(2018, 5, 30),
       posts: 13,
@@ -103,6 +97,7 @@ class DemoValues {
       postTime: DateTime(2019, 6, 29),
       reacts: 123,
       views: 456,
+      comments:_comments,
     ),
     PostModel(
       id: "2",
@@ -114,6 +109,7 @@ class DemoValues {
       postTime: DateTime(2019, 4, 13),
       reacts: 321,
       views: 654,
+      comments:_comments,
     ),
     PostModel(
       id: "3",
@@ -125,6 +121,7 @@ class DemoValues {
       postTime: DateTime(2019, 1, 12),
       reacts: 213,
       views: 546,
+      comments:_comments,
     ),
   ];
 }
