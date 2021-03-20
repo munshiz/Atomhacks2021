@@ -1,15 +1,44 @@
+
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:atomhacks_2021/helper/demo_values.dart';
+import 'package:atomhacks_2021/view/presentation/themes.dart';
+
+bool _isLandscape(BuildContext context) =>
+    MediaQuery.of(context).orientation == Orientation.landscape;
 
 class PostCard extends StatelessWidget {
   const PostCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 5 / 2,
-      child: Card(
-        child: Column(children: <Widget>[_Post(), _PostDetails()]),
+    final double aspectRatio = _isLandscape(context) ? 6 / 2 : 6 / 3;
+
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return PostPage();
+          }
+        ));
+      },
+      child: AspectRatio(
+        aspectRatio: aspectRatio,
+        child: Card(
+          elevation: 2,
+          child: Container(
+            margin: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(4.0),
+            child: Column(
+              children: <Widget>[
+                _Post(),
+                Divider(color: Colors.grey),
+                _PostDetails(),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -22,9 +51,7 @@ class _Post extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 3,
-      child: Row(
-        children: <Widget>[_PostImage(), _PostTitleAndSummary()],
-      ),
+      child: Row(children: <Widget>[_PostImage(), _PostTitleAndSummary()]),
     );
   }
 }
@@ -41,13 +68,17 @@ class _PostTitleAndSummary extends StatelessWidget {
 
     return Expanded(
       flex: 3,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Text(title, style: titleTheme),
-          Text(summary, style: summaryTheme),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 4.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Text(title, style: titleTheme),
+            SizedBox(height: 2.0),
+            Text(summary, style: summaryTheme),
+          ],
+        ),
       ),
     );
   }
@@ -68,7 +99,11 @@ class _PostDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: <Widget>[_UserImage(), _UserNameAndEmail()],
+      children: <Widget>[
+        _UserImage(),
+        _UserNameAndEmail(),
+        _PostTimeStamp(),
+      ],
     );
   }
 }
@@ -78,15 +113,22 @@ class _UserNameAndEmail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextStyle nameTheme = Theme.of(context).textTheme.subtitle;
+    final TextStyle emailTheme = Theme.of(context).textTheme.body1;
+
     return Expanded(
-      flex: 7,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(DemoValues.userName),
-          Text(DemoValues.userEmail),
-        ],
+      flex: 5,
+      child: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(DemoValues.userName, style: nameTheme),
+            SizedBox(height: 2.0),
+            Text(DemoValues.userEmail, style: emailTheme),
+          ],
+        ),
       ),
     );
   }
@@ -102,6 +144,19 @@ class _UserImage extends StatelessWidget {
       child: CircleAvatar(
         backgroundImage: AssetImage(DemoValues.userImage),
       ),
+    );
+  }
+}
+
+class _PostTimeStamp extends StatelessWidget {
+  const _PostTimeStamp({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final TextStyle timeTheme = TextThemes.dateStyle;
+    return Expanded(
+      flex: 2,
+      child: Text(DemoValues.postTime, style: timeTheme),
     );
   }
 }
