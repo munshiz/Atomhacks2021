@@ -24,7 +24,7 @@ class DemoValues {
     UserModel(
         id: "3",
         name: "Sakib",
-        email: "PathenS@bxscience.edu.com",
+        email: "PathenS@bxscience.edu",
         followers: 1,
         joined: DateTime(2020, 3, 20),
         posts: 1,
@@ -41,12 +41,12 @@ class DemoValues {
 
   static final List<CommentModel> _comments = <CommentModel>[
     CommentModel(
-      comment: "This is an example of the Comment Feature (Coming SOON)!",
+      comment: "This looks fantastic!",
       user: users[0],
       time: DateTime(2019, 4, 30),
     ),
     CommentModel(
-      comment: "Nintendo Switch Time? ",
+      comment: "Incredible ",
       user: users[1],
       time: DateTime(2018, 5, 30),
     ),
@@ -56,7 +56,7 @@ class DemoValues {
       time: DateTime(2017, 6, 30),
     ),
     CommentModel(
-      comment: "I hate Flutter We're using Java next time",
+      comment: "Good news!",
       user: users[2],
       time: DateTime(2019, 4, 30),
     ),
@@ -81,7 +81,7 @@ class DemoValues {
       time: DateTime(2018, 5, 30),
     ),
     CommentModel(
-      comment: "OMG DUDE SO POG",
+      comment: "Great!",
       user: users[1],
       time: DateTime(2017, 6, 30),
     ),
