@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:atomhacks_2021/helper/demo_values.dart';
 import 'package:atomhacks_2021/view/widgets/post_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,9 +12,9 @@ class HomePage extends StatelessWidget {
         title: Text("Leaf"),
       ),
       body: ListView.builder(
-        itemCount: 5,
+        itemCount: DemoValues.posts.length,
         itemBuilder: (BuildContext context, int index) {
-          return PostCard();
+          return PostCard(postData: DemoValues.posts[index]);
         },
       ),
     );
