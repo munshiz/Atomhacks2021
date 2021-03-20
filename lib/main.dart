@@ -8,7 +8,7 @@ import 'package:location/location.dart';
 
 void main() => runApp(Leaf());
 
-LatLng post_position;
+LatLng post_position = LatLng(0.0, 0.0);
 
 class Leaf extends StatelessWidget {
   const Leaf({Key key}) : super(key: key);
@@ -41,6 +41,9 @@ class MapSampleState extends State<MapSample> {
   @override
   Widget build(BuildContext context) {
     Set<Marker> markers = Set.from([]);
+    for (int i = 0; i < DemoValues.posts.length; i++) {
+      markers.add(DemoValues.posts.elementAt(i).location);
+    }
     return new Scaffold(
       body: GoogleMap(
         mapType: MapType.hybrid,
@@ -49,7 +52,8 @@ class MapSampleState extends State<MapSample> {
           _controller.complete(controller);
         },
         myLocationButtonEnabled: true,
-        markers: DemoValues.pins,
+        //markers: DemoValues.pins,
+        markers: markers,
         onLongPress: (pos) {
           print(pos);
           setState(() {

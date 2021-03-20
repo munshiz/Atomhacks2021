@@ -1,8 +1,10 @@
+import 'package:atomhacks_2021/main.dart';
 import 'package:atomhacks_2021/view/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:atomhacks_2021/model/post_model.dart';
 
 import 'package:atomhacks_2021/helper/demo_values.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class InputPage extends StatelessWidget {
   const InputPage({Key key}) : super(key: key);
@@ -57,6 +59,8 @@ class InputPage extends StatelessWidget {
                   reacts: 0,
                   views: 0,
                   comments: [],
+                  location: Marker(
+                      markerId: MarkerId("New Post"), position: post_position),
                 ));
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => HomePage()));

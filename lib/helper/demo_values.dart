@@ -101,6 +101,9 @@ class DemoValues {
       reacts: 3,
       views: 4,
       comments: _comments,
+      location: Marker(
+          markerId: MarkerId("Bxsci"),
+          position: LatLng(40.87833059490717, -73.89107432441394)),
     ),
     PostModel(
       id: "2",
@@ -115,6 +118,8 @@ class DemoValues {
       reacts: 4,
       views: 5,
       comments: _comments,
+      location: Marker(
+          markerId: MarkerId("Zawad"), position: LatLng(40.830283, -73.851971)),
     ),
     PostModel(
       id: "3",
@@ -128,6 +133,9 @@ class DemoValues {
       reacts: 2,
       views: 6,
       comments: _comments,
+      location: Marker(
+          markerId: MarkerId("Sakib"),
+          position: LatLng(40.840395017066896, -73.84533594442213)),
     ),
   ];
   static Set<Marker> pins = {

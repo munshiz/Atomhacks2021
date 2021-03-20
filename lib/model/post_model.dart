@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:atomhacks_2021/model/comment_model.dart';
 import 'package:atomhacks_2021/model/user_model.dart';
@@ -9,6 +10,7 @@ class PostModel {
   final int reacts, views;
   final UserModel author;
   final List<CommentModel> comments;
+  final Marker location;
 
   const PostModel({
     @required this.id,
@@ -21,6 +23,7 @@ class PostModel {
     @required this.reacts,
     @required this.views,
     @required this.comments,
+    this.location,
   });
 
   String get postTimeFormatted => DateFormat.yMMMMEEEEd().format(postTime);
