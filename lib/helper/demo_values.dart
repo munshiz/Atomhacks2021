@@ -9,7 +9,7 @@ class DemoValues {
       name: "Vaibhav",
       email: "Vaibhav.Hariani@gmail.com",
       followers: 0,
-      joined: DateTime(2020, 3, 20),
+      joined: DateTime(2021, 3, 20),
       posts: 1,
       image: "assets/images/Vaibhav.png",
     ),
@@ -24,7 +24,7 @@ class DemoValues {
     UserModel(
         id: "3",
         name: "Sakib",
-        email: "SwitchgoBrr@1337.com",
+        email: "PathenS@bxscience.edu.com",
         followers: 1,
         joined: DateTime(2020, 3, 20),
         posts: 1,
@@ -41,7 +41,7 @@ class DemoValues {
 
   static final List<CommentModel> _comments = <CommentModel>[
     CommentModel(
-      comment: "Filler Text Filler Text",
+      comment: "This is an example of the Comment Feature (Coming SOON)!",
       user: users[0],
       time: DateTime(2019, 4, 30),
     ),
