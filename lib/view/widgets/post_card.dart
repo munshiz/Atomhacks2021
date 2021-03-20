@@ -24,7 +24,7 @@ class PostCard extends StatelessWidget {
       onTap: () {
         Navigator.push(context,
             MaterialPageRoute(builder: (BuildContext context) {
-          return PostPage();
+          return PostPage(postData: postData);
         }));
       },
       child: AspectRatio(
@@ -34,8 +34,6 @@ class PostCard extends StatelessWidget {
           child: Container(
             margin: const EdgeInsets.all(4.0),
             padding: const EdgeInsets.all(4.0),
-            
-            // I created it here!
             child: InheritedPostModel(
               postData: postData,
               child: Column(
