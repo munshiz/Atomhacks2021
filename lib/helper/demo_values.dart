@@ -6,80 +6,94 @@ class DemoValues {
   static final List<UserModel> users = [
     UserModel(
       id: "1",
-      name: "Ishfar",
-      email: "ishfar@gmail.com",
-      followers: 123,
-      joined: DateTime(2019, 4, 30),
-      posts: 12,
-      image:"assets/images/user.jpg"
+      name: "Vaibhav",
+      email: "Vaibhav.Hariani@gmail.com",
+      followers: 0,
+      joined: DateTime(2020, 3, 20),
+      posts: 1,
+      image:"assets/images/Vaibhav.png",
     ),
     UserModel(
       id: "AMA",
       name: "Zawad",
       email: "Munshiz@bxscience.edu",
-      followers: 456,
-      joined: DateTime(2018, 5, 30),
-      posts: 13,
-      image:"assets/images/user.jpg"
+      followers: 1,
+      joined: DateTime(2020, 3, 20),
+      posts: 1,
+      image:"assets/images/Zawad.png"
     ),
     UserModel(
       id: "3",
-      name: "Shakleen",
-      email: "shakleen@gmail.com",
-      followers: 789,
-      joined: DateTime(2017, 6, 30),
-      posts: 14,
-      image:"assets/images/user.jpg"
+      name: "Sakib",
+      email: "SwitchgoBrr@1337.com",
+      followers: 1,
+      joined: DateTime(2020, 3, 20),
+      posts: 1,
+      image:"assets/images/Sakib.png"
+    ),
+    UserModel(
+        id: "4",
+        name: "Oliver",
+        email: "OldeVer@1337.com",
+        followers: 1,
+        joined: DateTime(2020, 3, 20),
+        posts: 1,
+        image:"assets/images/Oliver.png"
     ),
   ];
 
     static final List<CommentModel> _comments = <CommentModel>[
     CommentModel(
       comment:
-          "Et hic et sequi inventore. Molestiae laboriosam commodi exercitationem eum. ",
+          "Filler Text Filler Text",
       user: users[0],
       time: DateTime(2019, 4, 30),
     ),
     CommentModel(
-      comment: "Unde id provident ut sunt in consequuntur qui sed. ",
+      comment:
+      "Nintendo Switch Time? ",
       user: users[1],
       time: DateTime(2018, 5, 30),
     ),
     CommentModel(
-      comment: "Eveniet nesciunt distinctio sint ut. ",
+      comment:
+      "I like this app!",
       user: users[0],
       time: DateTime(2017, 6, 30),
     ),
     CommentModel(
-      comment: "Et facere a eos accusantium culpa quaerat in fugiat suscipit. ",
+      comment:
+      "I hate Flutter We're using Java next time",
       user: users[2],
       time: DateTime(2019, 4, 30),
     ),
     CommentModel(
-      comment: "Necessitatibus pariatur harum deserunt cum illum ut.",
+      comment:
+      "This is weird, I've never heard of this before",
       user: users[1],
       time: DateTime(2018, 5, 30),
     ),
     CommentModel(
       comment:
-          "Accusantium neque quis provident voluptatem labore quod dignissimos eum quaerat. ",
+      "This is actually sick, I'm so happy right now",
       user: users[2],
       time: DateTime(2017, 6, 30),
     ),
     CommentModel(
       comment:
-          "Accusantium neque quis provident voluptatem labore quod dignissimos eum quaerat. ",
+      "This is actually really interesting, I'll check it out",
       user: users[1],
       time: DateTime(2019, 4, 30),
     ),
     CommentModel(
-      comment: "Neque est ut rerum vel sunt harum voluptatibus et. ",
+      comment:
+      "OMG DUDE THIS IS SO COOL!!!!!",
       user: users[0],
       time: DateTime(2018, 5, 30),
     ),
     CommentModel(
       comment:
-          "Hic accusantium minus fuga exercitationem id aut expedita doloribus. ",
+          "OMG DUDE SO POG",
       user: users[1],
       time: DateTime(2017, 6, 30),
     ),
@@ -90,37 +104,37 @@ class DemoValues {
     PostModel(
       id: "1",
       author: users[0],
-      title: "Maple Trees",
-      summary: "An in-depth study on maple trees.",
-      body: "The study is a lie. I just really really like maple trees.",
-      imageURL: "assets/images/leaf.jpg",
+      title: "AMA!",
+      summary: "An AMA on the Research Done by The Great Vaibhav Hariani",
+      body: "Vaibhav Hariani is a renowned nobel lauerate and researcher of metaphysics and racism at Stanford University. Come and ask him questions about everything since he knows everything!",
+      imageURL: "assets/images/AMA.jpg",
       postTime: DateTime(2019, 6, 29),
-      reacts: 123,
-      views: 456,
+      reacts: 3,
+      views: 4,
       comments:_comments,
     ),
     PostModel(
       id: "2",
       author: users[1],
-      title: "Oak Trees",
-      summary: "Preaching about oak trees",
-      body: "Oak trees are the best. All other trees are sub-par.",
-      imageURL: "assets/images/leaf.jpg",
+      title: "News Article",
+      summary: "Article Regarding Racism About The  Housing Authority I found interesting",
+      body: "https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=3812&context=uclrev",
+      imageURL: "assets/images/newstub.jpg",
       postTime: DateTime(2019, 4, 13),
-      reacts: 321,
-      views: 654,
+      reacts: 4,
+      views: 5,
       comments:_comments,
     ),
     PostModel(
       id: "3",
       author: users[2],
-      title: "Mango Trees",
-      summary: "Gives shadow and fruit. Absolute win, no?",
-      body: "I just love mangos. What's better than mangos? The tree that gives mangos.",
-      imageURL: "assets/images/leaf.jpg",
+      title: "Protest!",
+      summary: "Join Us In Protesting For Pay Equality!",
+      body: "Equal Pay is something I care about and I'd like to advocate for it. Join us in protesting!",
+      imageURL: "assets/images/PinDROP.jpg",
       postTime: DateTime(2019, 1, 12),
-      reacts: 213,
-      views: 546,
+      reacts: 2,
+      views: 6,
       comments:_comments,
     ),
   ];

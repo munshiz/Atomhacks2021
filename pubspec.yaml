@@ -53,9 +53,13 @@ flutter:
   - assets/images/user.jpg
   - assets/images/leaf.jpg
   - assets/images/AMA.jpg
-  - assets/images/Newstub.jpg
   - assets/images/PinDROP.jpg
   - assets/images/icon.png
+  - assets/images/Oliver.png
+  - assets/images/Sakib.png
+  - assets/images/Vaibhav.png
+  - assets/images/Zawad.png
+  - assets/images/newstub.jpg
 
 flutter_icons:
   android: "icon.png"
