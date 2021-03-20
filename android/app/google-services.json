@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "494575387132",
+    "project_id": "atomhacks-2021",
+    "storage_bucket": "atomhacks-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494575387132:android:795d346c54312ca83b7279",
+        "android_client_info": {
+          "package_name": "com.zawadm321.atomhacks_2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494575387132-i1ejceeghq7oodf00iel4338nicmkbqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_HjqkBTflaer0v-kQqg1lcmjADZWsqnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494575387132-i1ejceeghq7oodf00iel4338nicmkbqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
