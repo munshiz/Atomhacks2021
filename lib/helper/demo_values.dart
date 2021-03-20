@@ -1,6 +1,7 @@
 import 'package:atomhacks_2021/model/post_model.dart';
 import 'package:atomhacks_2021/model/user_model.dart';
 import 'package:atomhacks_2021/model/comment_model.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class DemoValues {
   static final List<UserModel> users = [
@@ -129,4 +130,14 @@ class DemoValues {
       comments: _comments,
     ),
   ];
+  static Set<Marker> pins = {
+    Marker(
+        markerId: MarkerId("Zawad"), position: LatLng(40.830283, -73.851971)),
+    Marker(
+        markerId: MarkerId("Bxsci"),
+        position: LatLng(40.87833059490717, -73.89107432441394)),
+    Marker(
+        markerId: MarkerId("Sakib"),
+        position: LatLng(40.840395017066896, -73.84533594442213)),
+  };
 }

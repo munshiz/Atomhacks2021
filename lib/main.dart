@@ -1,3 +1,4 @@
+import 'package:atomhacks_2021/helper/demo_values.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -48,7 +49,7 @@ class MapSampleState extends State<MapSample> {
           _controller.complete(controller);
         },
         myLocationButtonEnabled: true,
-        markers: markers,
+        markers: DemoValues.pins,
         onLongPress: (pos) {
           print(pos);
           setState(() {
