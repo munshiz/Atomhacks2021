@@ -5,6 +5,7 @@ import 'dart:async';
 import 'view/pages/home_page.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
+import 'package:vibration/vibration.dart';
 
 void main() => runApp(Leaf());
 
@@ -62,6 +63,7 @@ class MapSampleState extends State<MapSample> {
               position: pos,
             ));
           });
+          Vibration.vibrate();
           post_position = pos;
         },
       ),
