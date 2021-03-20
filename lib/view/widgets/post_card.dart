@@ -94,7 +94,7 @@ class _PostTitleSummaryAndTime extends StatelessWidget {
                 Text(summary, style: summaryTheme),
               ],
             ),
-            _PostTimeStamp(),
+            //_PostTimeStamp(),
           ],
         ),
       ),
@@ -178,7 +178,7 @@ class _PostTimeStamp extends StatelessWidget {
     final TextStyle timeTheme = TextThemes.dateStyle;
     return Expanded(
       flex: 2,
-      child: Text(DateFormat('yyyy-MM-dd – kk:mm').format(postData.postTime), style: timeTheme),
+      child: Text(DateFormat('yyyy-MM-dd').format(postData.postTime), style: timeTheme),
     );
   }
 }

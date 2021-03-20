@@ -19,7 +19,7 @@ class DemoValues {
         name: "Zawad",
         email: "Munshiz@bxscience.edu",
         followers: 1,
-        joined: DateTime(2020, 3, 20),
+        joined: DateTime(2021, 3, 20),
         posts: 1,
         image: "assets/images/Zawad.png"),
     UserModel(
@@ -27,7 +27,7 @@ class DemoValues {
         name: "Sakib",
         email: "PathenS@bxscience.edu",
         followers: 1,
-        joined: DateTime(2020, 3, 20),
+        joined: DateTime(2021, 3, 20),
         posts: 1,
         image: "assets/images/Sakib.png"),
     UserModel(
@@ -35,7 +35,7 @@ class DemoValues {
         name: "Oliver",
         email: "OldeVer@1337.com",
         followers: 1,
-        joined: DateTime(2020, 3, 20),
+        joined: DateTime(2021, 3, 20),
         posts: 1,
         image: "assets/images/Oliver.png"),
   ];
@@ -44,47 +44,47 @@ class DemoValues {
     CommentModel(
       comment: "This looks fantastic!",
       user: users[0],
-      time: DateTime(2019, 4, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "Incredible ",
       user: users[1],
-      time: DateTime(2018, 5, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "I like this app!",
       user: users[0],
-      time: DateTime(2017, 6, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "Good news!",
       user: users[2],
-      time: DateTime(2019, 4, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "This is weird, I've never heard of this before",
       user: users[1],
-      time: DateTime(2018, 5, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "This is actually sick, I'm so happy right now",
       user: users[2],
-      time: DateTime(2017, 6, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "This is actually really interesting, I'll check it out",
       user: users[1],
-      time: DateTime(2019, 4, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "OMG DUDE THIS IS SO COOL!!!!!",
       user: users[0],
-      time: DateTime(2018, 5, 30),
+      time: DateTime(2021, 3, 20),
     ),
     CommentModel(
       comment: "Great!",
       user: users[1],
-      time: DateTime(2017, 6, 30),
+      time: DateTime(2021, 3, 20),
     ),
   ];
 
@@ -97,7 +97,7 @@ class DemoValues {
       body:
           "Vaibhav Hariani is a renowned nobel lauerate and researcher of metaphysics and racism at Stanford University. Come and ask him questions about everything since he knows everything!",
       imageURL: "assets/images/AMA.jpg",
-      postTime: DateTime(2019, 6, 29),
+      postTime: DateTime(2021, 3, 20),
       reacts: 3,
       views: 4,
       comments: _comments,
@@ -111,7 +111,7 @@ class DemoValues {
       body:
           "https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=3812&context=uclrev",
       imageURL: "assets/images/AMA.jpg",
-      postTime: DateTime(2019, 4, 13),
+      postTime: DateTime(2021, 3, 20),
       reacts: 4,
       views: 5,
       comments: _comments,
@@ -124,7 +124,7 @@ class DemoValues {
       body:
           "Equal Pay is something I care about and I'd like to advocate for it. Join us in protesting!",
       imageURL: "assets/images/PinDROP.jpg",
-      postTime: DateTime(2019, 1, 12),
+      postTime: DateTime(2021, 3, 20),
       reacts: 2,
       views: 6,
       comments: _comments,
