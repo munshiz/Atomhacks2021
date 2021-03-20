@@ -13,7 +13,7 @@ class DemoValues {
       image:"assets/images/user.jpg"
     ),
     UserModel(
-      id: "AMA",
+      id: "AMA ",
       name: "Zawad",
       email: "MunshiZ@bxscience.edu",
       followers: 456,
@@ -67,6 +67,17 @@ class DemoValues {
     PostModel(
       id: "3",
       author: users[2],
+      title: "Protest!",
+      summary: "Join Me in Protesting for equal pay opportunities!",
+      body: "Advocates of women's economic equality gathered on the steps of New York City Hall Tuesday to speak out against the various barriers women encounter in the workplace.",
+      imageURL: "assets/images/pinDROP.jpg",
+      postTime: DateTime(2019, 1, 12),
+      reacts: 213,
+      views: 546,
+    ),
+    PostModel(
+      id: "PROTESTESROS",
+      author: users[3],
       title: "Protest!",
       summary: "Join Me in Protesting for equal pay opportunities!",
       body: "Advocates of women's economic equality gathered on the steps of New York City Hall Tuesday to speak out against the various barriers women encounter in the workplace.",
