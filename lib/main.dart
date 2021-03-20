@@ -3,8 +3,11 @@ import 'dart:async';
 
 import 'view/pages/home_page.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
 
 void main() => runApp(Leaf());
+
+LatLng post_position;
 
 class Leaf extends StatelessWidget {
   const Leaf({Key key}) : super(key: key);
@@ -30,18 +33,13 @@ class MapSampleState extends State<MapSample> {
   Completer<GoogleMapController> _controller = Completer();
 
   static final CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
-    zoom: 14.4746,
+    target: LatLng(40.87833059490717, -73.89107432441394),
+    zoom: 18,
   );
-
-  static final CameraPosition _kLake = CameraPosition(
-      bearing: 192.8334901395799,
-      target: LatLng(37.43296265331129, -122.08832357078792),
-      tilt: 59.440717697143555,
-      zoom: 19.151926040649414);
 
   @override
   Widget build(BuildContext context) {
+    Set<Marker> markers = Set.from([]);
     return new Scaffold(
       body: GoogleMap(
         mapType: MapType.hybrid,
@@ -49,17 +47,56 @@ class MapSampleState extends State<MapSample> {
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
+        myLocationButtonEnabled: true,
+        markers: markers,
+        onLongPress: (pos) {
+          print(pos);
+          setState(() {
+            markers.add(Marker(
+              markerId: MarkerId("98932432"),
+              position: pos,
+            ));
+          });
+          post_position = pos;
+        },
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: _goToTheLake,
-        label: Text('Jump to Home'),
-        icon: Icon(Icons.directions_boat),
+        onPressed: _goToCurrentPosition,
+        label: Text('Where am I?'),
+        icon: Icon(Icons.pin_drop),
       ),
     );
   }
 
-  Future<void> _goToTheLake() async {
+  Future<void> _goToCurrentPosition() async {
+    Location location = new Location();
+
+    bool _serviceEnabled;
+    PermissionStatus _permissionGranted;
+    LocationData _locationData;
+
+    _serviceEnabled = await location.serviceEnabled();
+    if (!_serviceEnabled) {
+      _serviceEnabled = await location.requestService();
+      if (!_serviceEnabled) {
+        return;
+      }
+    }
+
+    _permissionGranted = await location.hasPermission();
+    if (_permissionGranted == PermissionStatus.denied) {
+      _permissionGranted = await location.requestPermission();
+      if (_permissionGranted != PermissionStatus.granted) {
+        return;
+      }
+    }
+
+    _locationData = await location.getLocation();
+
     final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
+    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
+      target: LatLng(_locationData.latitude, _locationData.longitude),
+      zoom: 16,
+    )));
   }
 }
